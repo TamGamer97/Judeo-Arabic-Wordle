@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Judeo-Arabic Wordle</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #842429;
+        }
+        #game-board {
+            display: grid;
+            grid-template-rows: repeat(6, 1fr);
+            gap: 5px;
+            margin-bottom: 20px;
+        }
+        .word-row {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 5px;
+        }
+        .letter-box {
+            width: 50px;
+            height: 50px;
+            border: 2px solid #d3d6da;
+            font-size: 2rem;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+            color: white;
+        }
+        #keyboard {
+            display: grid;
+            grid-template-rows: repeat(3, 1fr);
+            gap: 5px;
+        }
+        .keyboard-row {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+        }
+        .key {
+            width: 40px;
+            height: 50px;
+            /* background-color: #d3d6da; */
+            background-color: white;
+            color: black;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .key:hover {
+            background-color: #bbb;
+        }
+        #message {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .image-container {
+        position: absolute;
+        width: 30%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        overflow: hidden;
+            z-index: -1;
+    }
+
+    .scrolling-images {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        animation: scrollImages 10s linear infinite;
+    }
+
+    .scrolling-images img {
+        width: 100%;
+        display: block;
+    }
+    .aboutIcon:hover{
+        opacity: 0.7;
+        cursor: pointer;
+    }
+
+    /* @keyframes scrollImages {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(-33.33%); }
+    } */
+    h1 { font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; } h3 { font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; } p { font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } blockquote { font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } pre { font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px; }
+    </style>
+</head>
+<body>
+    <h1 style="color: white;">About</h1>
+
+    <h1 style="color: white;">About game...</h1>
+    
+    <script>
+        
+    </script>
+</body>
+</html>

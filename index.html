@@ -63,6 +63,8 @@
             font-size: 1.2rem;
             font-weight: bold;
             margin-bottom: 20px;
+            text-align: center;
+            color: white;
         }
         .image-container {
             position: absolute;
@@ -167,8 +169,14 @@
         </div>
     </div>
 
-    <div onclick="handleEnter()" class="enterBtn" style="width: 130px; height: 40px; display: flex; justify-content: center; align-items: center; background-color: aliceblue; margin-top: 20px; border-radius: 10px;">
-        <h1 style="text-align: center; font-weight: bold;">Enter</h1>
+    <div style="display: flex; gap: 20px;">
+        <div onclick="handleEnter()" class="enterBtn" style="width: 130px; height: 40px; display: flex; justify-content: center; align-items: center; background-color: aliceblue; margin-top: 20px; border-radius: 10px;">
+            <h1 style="text-align: center; font-weight: bold;">Enter</h1>
+        </div>
+    
+        <div onclick="handleBackspace()" class="enterBtn" style="width: 70px; height: 40px; display: flex; justify-content: center; align-items: center; margin-top: 20px; border-radius: 10px;">
+            <img src="backspaceIcon.png" style="width: 70px;" />
+        </div>
     </div>
 
     <img src="/rightimage2.jpg" style="position: absolute; right: 0px; top: 0px; width: 30%; height: 100%; z-index: -1;">
@@ -191,6 +199,7 @@
     <script>
         const words = ['שלום', 'תודה', 'עברי', 'ישראל', 'מילה'];
         const englishTranslation = ['word 1', 'word 2', 'word 3', 'word 4', 'word 5']
+        const lanugageOfOrigin = ['Arabic', 'Arabic','Arabic','Arabic','Arabic',]
         var wordIndex = Math.floor(Math.random() * words.length) // random index
 
         wordIndex = new Date().getDate() // date index
@@ -300,9 +309,9 @@
             }
 
             if (correctLetters === 5) {
-                messageElement.textContent = 'כל הכבוד! ניצחת! ' + englishTranslation[wordIndex];
+                messageElement.innerHTML = '<h1>' + 'מזל טוב' + '</h1>'  + englishTranslation[wordIndex] + '<br>' + lanugageOfOrigin[wordIndex]
             } else if (currentAttempt === 5) {
-                messageElement.textContent = `המשחק נגמר. המילה הייתה ${targetWord}` + englishTranslation[wordIndex];
+                messageElement.innerHTML = '<h1>' + 'לא נכון, התשובה הנכונה היא ' +  words[wordIndex] + '</h1>'  + englishTranslation[wordIndex] + '<br>' + lanugageOfOrigin[wordIndex]
             }
         }
 

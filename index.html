@@ -197,7 +197,7 @@
 
     <div id="resultPopup" class="popup">
         <div class="popup-content">
-            <span class="close">&times;</span>
+            <span class="close" onclick="document.getElementById('resultPopup').style.display = 'none'">&times;</span>
             <h1 style=" margin-top: 20px; text-align: center;">Word of the day</h1>
 
 
@@ -320,10 +320,14 @@
 
             if (correctLetters === 5) {
                 document.getElementById('resultPopup').style.display = 'block'
-                messageElement.innerHTML = '<h1>' + 'מזל טוב' + '<br>' + words[wordIndex] + ' :Judeo-Arabic Word' + '</h1>' + 'English Definition: ' + englishTranslation[wordIndex] + '<br>' + 'Lang uage of Origin: ' +  lanugageOfOrigin[wordIndex] + '<br><br>' + '!Try again tomorrow for a new word and definition'
+                // messageElement.innerHTML = '<h1>' + 'מזל טוב' + '<br>' + words[wordIndex] + ' :Judeo-Arabic Word' + '</h1>' + 'English Definition: ' + englishTranslation[wordIndex] + '<br>' + 'Lang uage of Origin: ' +  lanugageOfOrigin[wordIndex] + '<br><br>' + '!Try again tomorrow for a new word and definition'
+                messageElement.innerHTML = '<h1>' + words[wordIndex] + ' :Judeo-Arabic Word' + '</h1>' + 'English Definition: ' + englishTranslation[wordIndex] + '<br>' + 'Lang uage of Origin: ' +  lanugageOfOrigin[wordIndex] + '<br><br>' + '!Try again tomorrow for a new word and definition'
+
             } else if (currentAttempt === 5) {
                 document.getElementById('resultPopup').style.display = 'block'
-                messageElement.innerHTML = '<h1>' + 'לא נכון, התשובה הנכונה היא ' +  words[wordIndex] +  '<br>' + words[wordIndex] + ' :Judeo-Arabic Word' + '</h1>' + 'English Definition: ' + englishTranslation[wordIndex] + '<br>' + 'Lang uage of Origin: ' +  lanugageOfOrigin[wordIndex] + '<br><br>' + '!Try again tomorrow for a new word and definition' + '</h1>' 
+                // messageElement.innerHTML = '<h1>' + 'לא נכון, התשובה הנכונה היא ' +  words[wordIndex] +  '<br>' + words[wordIndex] + ' :Judeo-Arabic Word' + '</h1>' + 'English Definition: ' + englishTranslation[wordIndex] + '<br>' + 'Lang uage of Origin: ' +  lanugageOfOrigin[wordIndex] + '<br><br>' + '!Try again tomorrow for a new word and definition' + '</h1>' 
+                messageElement.innerHTML = '<h1>' + words[wordIndex] + ' :Judeo-Arabic Word' + '</h1>' + 'English Definition: ' + englishTranslation[wordIndex] + '<br>' + 'Lang uage of Origin: ' +  lanugageOfOrigin[wordIndex] + '<br><br>' + '!Try again tomorrow for a new word and definition' + '</h1>' 
+
             }
         }
 

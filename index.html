@@ -335,6 +335,8 @@
             return hebrewLayout.some(row => row.includes(key));
         }
 
+        const scrollSpeed = 0.5 // 0 is original speed
+
         createGameBoard();
         createKeyboard();
 
@@ -357,7 +359,7 @@
                 if (scrollingImages.offsetTop <= -3000) {
                     scrollingImages.style.top = '50px';
                 } else {
-                    scrollingImages.style.top = `${scrollingImages.offsetTop - 1}px`;
+                    scrollingImages.style.top = `${(scrollingImages.offsetTop - 1) - (scrollSpeed * 10^5)}px`;
                 }
                 requestAnimationFrame(checkScroll);
             }
